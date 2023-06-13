@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        overflow-x: hidden;
+        height: 130vh;
+        width: 100vw;
+      }
+      .main {
+        overflow: hidden;
+        height: 130vh;
+        width: 100vw;
+        background-color: #000;
+      }
+      .main header {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 12%;
+        width: 100vw;
+        /* background-color: rgb(190, 114, 114); */
+      }
+      header nav {
+        margin-left: -30px;
+        display: flex;
+        align-items: start;
+        gap: 30px;
+        font-size: 17px;
+        font-family: Copperplate Gothic;
+      }
+      header nav a {
+        position: relative;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      header nav a::after {
+        content: "";
+        height: 2px;
+        width: 0%;
+        background-color: #fff;
+        position: absolute;
+        bottom: -3px;
+        left: 50%;
+        /* background-color: #151400; */
+        transform: translate(-50%, 0%);
+        transition: all ease 0.5s;
+        /* cursor: pointer;; */
+      }
+      header nav a:hover::after{
+        width: 100%;
+      }
+      header h2{
+        font-size: 30px;
+        color: #fff;
+        font-family: gilroy;
+      }
+      header button{
+        padding: 10px 20px;
+        background-color: transparent;
+        border: 1px solid #fff;
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: bold;
+        color: #fff;
+        letter-spacing: 2px;
+        border-radius: 50px;
+        margin-right: -30px;
+        transition: .4s;
+      }
+      header button:hover{
+        background-color: #fff;
+        color: black;
+        border: 1px solid #000;
+        cursor: pointer;
+        transition: 1s;
+      }
+      .contant{
+        display: flex;
+        height: 120%;
+        width: 100vw;
+        /* background-color: brown; */
+      }
+      .contant .left{
+        padding:.1px ;
+        height: 100%;
+        width: 50%;
+        /* background-color: blue; */
+      }
+      .contant .left h1{
+        margin-top: 30px;
+        margin-left: 18%;
+        font-size: 55px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-family: Copperplate Gothic;
+        font-weight: 600;
+        color: #fff;
+      }
+      .contant .left h2{
+              /* margin-top: 30px; */
+        margin-left: 18%;
+        font-size: 50px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-family: Copperplate Gothic;
+        font-weight: 500;
+        color: #fff;
+      }
+      
+      
+ .contant .right{
+    /* padding: 40px; */
+        height: 100%;
+        width: 50%;
+        /* background-color: rgb(64, 64, 99); */
+      }
+      .contant .right .para{
+        margin-left: 40px;
+        margin-top: 40px;
+        font-size: 13px;
+        text-transform: capitalize;
+        word-spacing: 5px;
+        width: 88%;
+        color: #fff;
+        font-family: Copperplate Gothic; 
+        font-weight: 400;
+
+      }
+      .contant .right button{
+        padding: 10px 25px ;
+        font-size: 17px;
+        text-transform: capitalize;
+        color: #fff;
+        font-family: gilroy; 
+        font-weight: 600;
+        background-color: #fff;
+        color: #000;
+        border-radius: 50px;
+        border: 1px solid black;
+        margin-left: 40px;
+        margin-top: 60px;
+        transition: .5s;
+
+      }
+      .contant .right button:hover{
+        background-color: transparent;
+        border: 1px solid white;
+        color: #fff;
+        cursor: pointer;
+      }
+     
+       .coverimg{
+        display: flex;
+        position: relative;
+        margin-top: 7px;
+        height: 520px;
+        width: 100%;
+        /* background-color: brown; */
+      }
+       .coverimg .box1{
+        margin-top: 30px;
+        text-align: center;
+        height: 100%;
+        width: 50%;
+        background-color: rgb(130, 130, 160);
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+      }
+      .coverimg .box1 h3{
+        margin-top: 40px;
+        font-size: 18px;
+        font-family: gilroy;
+        text-transform: capitalize;
+
+      }
+       .coverimg .box1 p{
+        margin-top: 3px;
+        font-size: 15px;
+        font-family: Copperplate Gothic; 
+        text-transform: capitalize;
+
+      }
+      .coverimg .box2 h3{
+        margin-top: 40px;
+        font-size: 18px;
+        font-family: gilroy;
+        text-transform: capitalize;
+
+      }
+       .coverimg .box2 p{
+        margin-top: 3px;
+        font-size: 15px;
+        font-family: Copperplate Gothic; 
+        text-transform: capitalize;
+
+      }
+
+         .coverimg .box2{
+            text-align: center;
+            margin-top: 12%;
+        height: 90%;
+        width: 50%;
+        background-color: rgb(79, 79, 88);
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+      }
+      .left .a{
+        overflow: hidden;
+        background-color: #faa5cc;
+      }
+      .left .a img{
+       height: 100%;
+       margin-top: 30px;
+      }
+       .left .b img{
+       height: 100%;
+       margin-top: 30px;
+      }
+        .right .c img{
+       height: 85%;
+       margin-left: -60%;
+       object-fit: cover;
+       object-position: center;
+       margin-top: 30px;
+      }
+        .right .d img{
+       height: 150%;
+       margin-top: 30px;
+      }
+      .left .b{
+        overflow: hidden;
+        background-color: #bdecf8;
+      }
+      .right .c{
+        overflow: hidden;
+
+        background-color: #c2bec0;
+      }
+       .right .d{
+        overflow: hidden;
+
+        background-color: #ffdb11;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <header>
+        <nav>
+          <a href="">download</a>
+          <a href="">blog</a>
+          <a href="">cost</a>
+        </nav>
+        <h2>dev.io</h2>
+        <button>get matched</button>
+      </header>
+      <div class="contant">
+        <div class="left">
+            <h1>the magic devs</h1>
+            <h2>you've been <br>searching for</h2>
+              <div class="coverimg">
+                <div class="box1 a">
+                    <h3>anna dean</h3>
+                    <p>react engineer</p>
+                    <img src="/assets/4.png" alt="">
+
+                </div>
+                <div class="box2 b">
+                    <h3>jim dean</h3>
+                    <p>data engineer</p>
+                    <img src="/assets/1 (2).png" alt="">
+                </div>
+
+            </div>
+        </div>
+        <div class="right">
+            <p class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum porro eaque quisquam aut sequi nam rem fugit delectus a, expedita culpa? Explicabo commodi, totam consectetur ab non repudiandae quibusdam aspernatur!</p>
+            <button>find your developer</button>
+            <div class="coverimg">
+                <div class="box1 c">
+                    <h3>leslie dean</h3>
+                    <p>backend developer</p>
+                    <img src="assets/2 (2).png" alt="">
+                </div>
+                <div class="box2 d">
+                    <h3>cheris mezy</h3>
+                    <p>ai specialist</p>
+                    <img src="/assets/3 (2).png" alt="">
+                </div>
+
+
+            </div>
+        </div>
+
+      </div>
+
+    </div>
+  </body>
+</html>
